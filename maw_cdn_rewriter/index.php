@@ -12,16 +12,6 @@ Version: 0.0
 Author URI: http://ma.ttwagner.com/
 */
 
-/*
-function sub_cdn($content='') {
-  $source = '/http:\/\/blogs.n1zyy.com\/(\w+)\/wp-content/';
-  $rep = 'http:\/\/blogscdn.n1zyy.com\/$1\/wp-content';
-  return preg_replace($source, $rep, $content);
-}
-
-add_filter('the_content', 'sub_cdn');
-*/
-
 function sub_cdn($content='') {
     ob_start(function($content){
       $source = '/http:\/\/blogs.n1zyy.com\/(\w+)\/wp-content/';
